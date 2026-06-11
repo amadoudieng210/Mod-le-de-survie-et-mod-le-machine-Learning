@@ -1,14 +1,11 @@
-
 from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 from lifelines import CoxPHFitter
 from sklearn.linear_model import LogisticRegression
 import json
-import os
 
-# CONFIGURATION SÉCURISÉE : Flask cherchera dans 'templates' ET à la racine du projet
-app = Flask(__name__, template_folder=['templates', '.'])
+app = Flask(__name__)
 
 def init_models():
     chemin_fichier = "ProjetM2SID2026.xlsx"
